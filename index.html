@@ -8,24 +8,27 @@
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="styles.css">
-  <title>Frontend Mentor | Fylo data storage component</title>  
+  <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+  <title>Frontend Mentor | Fylo data storage component</title>
 </head>
 
 <body>
-  <div>
-    <div>
-      <img src="images/logo.svg" alt="Fylo-logo">
-      <img src="images/icon-document.svg" alt="icon-document">
-      <img src="images/icon-folder.svg" alt="icon-folder">
-      <img src="images/icon-upload.svg" alt="icon-upload">
+  <div class="container">
+    <div class="box left">
+      <img id="logo" src="images/logo.svg" alt="Fylo-logo">
+      <div class="icon-container">
+        <a class="icon"><img src="images/icon-document.svg" alt="icon-document"></a>
+        <a class="icon"><img src="images/icon-folder.svg" alt="icon-folder"></a>
+        <a class="icon"><img src="images/icon-upload.svg" alt="icon-upload"></a>
+      </div>
     </div>
-    <div>
-      <p>You’ve used 815 GB of your storage</p>
+    <div class="box right">
+      <p>You’ve used <span>815 GB</span> of your storage</p>
       <p><strong>185</strong> GB Left</p>
       <div>
         <progress max="1000" value="815">815 Gb</progress>
-        <p>0 GB</p>
-        <p>1000 GB</p>
+        <p class="caption left">0 GB</p>
+        <p class="caption right">1000 GB</p>
       </div>
     </div>
   </div>
