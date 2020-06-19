@@ -1,4 +1,12 @@
 html {
+  height: 100%;
+  padding: 0px;
+  margin: 0px;
+}
+
+body {
+  margin: 0px;
+  padding: 0px;
   background-color: hsl(229, 57%, 11%);
   background-image: url(images/bg-desktop.svg);
   background-repeat: no-repeat;
@@ -6,12 +14,15 @@ html {
   background-position: bottom;
   font-family: 'Raleway', sans-serif;
   font-size: 14px;
-  min-height: 100%;
+  height: 100%;
 }
 
 .container {
   display: flex;
-  margin: 200px auto;
+  margin: 0px auto;
+  padding-top: 50vh;
+  padding-bottom: 10vh;
+  transform: translateY(-20%);
   justify-content: center;
 }
 
@@ -29,6 +40,9 @@ html {
 .box.right {  
   width: 500px;
   color: white;
+  position: relative;
+  align-self: flex-end;
+  padding: 20px 40px 40px 40px;
 }
 
 #logo {
@@ -55,6 +69,71 @@ html {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+#bubble {
+  position: absolute;
+  top: -40px;
+  right: 40px;
+}
+
+#bubble p {
+  padding: 20px;
+  background-color: white;
+  color: black;
+  margin: 0px;
+  border-radius: 10px 10px 0px 10px;
+}
+
+#bubble span {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  font-size: 30px;
+}
+
+#bubble .arrow-down {
+  width: 0px; 
+  height: 0px; 
+  border-left: 20px solid transparent;
+  border-top: 20px solid white;
+  position: absolute;
+  margin-top: -1px;
+  right: 0px;
+}
+
+.meter { 
+	height: 10px;
+	position: relative;
+	background: hsl(229, 57%, 11%);
+	-moz-border-radius: 25px;
+	-webkit-border-radius: 25px;
+	border-radius: 25px;
+  padding: 3px;
+  margin-bottom: 6px;
+}
+
+.meter > span {
+  display: block;
+  height: 100%;
+  border-radius: 20px;
+  background: linear-gradient(to right,
+    hsl(6, 100%, 80%),
+    hsl(335, 100%, 65%)
+  );
+  box-shadow: 
+    inset 0 2px 9px  rgba(255,255,255,0.3),
+    inset 0 -2px 6px rgba(0,0,0,0.4);
+  position: relative;
+  overflow: hidden;
+}
+
+.caption {
+  display: flex;
+  justify-content: space-between;
+}
+
+.caption p {
+  margin: 0px;
 }
 
 .attribution {
