@@ -112,6 +112,16 @@ body {
   margin-bottom: 6px;
 }
 
+.meter  .slider {
+  width: 8px;
+  height: 8px;
+  border-radius: 20px;
+  background-color: white;
+  position: absolute;
+  top: 1px;
+  right: 1px;
+}
+
 .meter > span {
   display: block;
   height: 100%;
@@ -143,4 +153,52 @@ body {
 
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+@media (max-width: 375px) {
+  body {
+    background-image: url(images/bg-mobile.svg);
+    background-size: cover;
+  }
+  
+  .container {
+    padding-top: 130px;
+    flex-direction: column;
+  }
+
+  .box.right {
+    width: 300px;
+    box-sizing: border-box;
+    align-self: center;
+    padding: 10px 20px 40px 20px;
+    margin-top: 0px;
+  }
+
+  .box.right > p {
+    text-align: center;
+  }
+
+  .box.left {
+    align-self: center;
+  }
+
+  #bubble {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-70%);
+    top: 110px;
+  }
+
+  #bubble p {
+    border-radius: 10px;
+    width: 150px;
+    text-align: center;
+    box-sizing: border-box;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  #bubble .arrow-down {
+    border-top: 20px solid transparent;
+  }
 }
