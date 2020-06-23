@@ -20,9 +20,10 @@ body {
 .container {
   display: flex;
   margin: 0px auto;
-  padding-top: 50vh;
-  padding-bottom: 10vh;
-  transform: translateY(-20%);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   justify-content: center;
 }
 
@@ -149,6 +150,10 @@ body {
 .attribution {
   font-size: 11px;
   text-align: center;
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .attribution a {
